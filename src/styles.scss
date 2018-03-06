@@ -1,4 +1,5 @@
 @import "~@angular/material/prebuilt-themes/purple-green.css";
+
 html,body,app-root,mat-sidenav-container,.container{
     width: 100%;
     height: 100%;
@@ -14,10 +15,4 @@ html,body,app-root,mat-sidenav-container,.container{
 }
 main{
     flex:1 0 auto; /*flex属性是 flex-grow(扩展量) flex-shrink(伸缩量) flex-basis(伸缩基准值)的简写*/
-}
-header{
-    background: red;
-}
-footer{
-    background: green;
 }
