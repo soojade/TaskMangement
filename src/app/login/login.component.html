@@ -3,12 +3,17 @@
     <mat-card-title>登录:</mat-card-title>
   </mat-card-header>
   <mat-card-content>
-    <mat-input-container>
-      <input type="text" matInput placeholder="请输入您的邮箱地址">
+    <mat-input-container color="warn">
+      <input type="email" matInput placeholder="请输入您的邮箱地址">
+      <mat-hint>必填</mat-hint>
     </mat-input-container>
   </mat-card-content>
   <mat-card-actions>
-    <p>还没有账号? <a href="">注册</a></p>
-    <p>忘记密码? <a href="">找回</a></p>
+    <p>还没有账号?
+      <a href="" style="color:orange">注册</a>
+    </p>
+    <p>忘记密码?
+      <a href="" style="color:red">找回</a>
+    </p>
   </mat-card-actions>
 </mat-card>
