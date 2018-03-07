@@ -1,4 +1,5 @@
-@import "~@angular/material/prebuilt-themes/purple-green.css";
+// @import "~@angular/material/prebuilt-themes/purple-green.css";
+@import 'theme.scss';
 
 html,body,app-root,mat-sidenav-container,.container{
     width: 100%;
@@ -7,14 +8,14 @@ html,body,app-root,mat-sidenav-container,.container{
     padding: 0;
 }
 main{
-    flex:1 0 auto; /*flex属性是 flex-grow(扩展量) flex-shrink(伸缩量) flex-basis(伸缩基准值)的简写*/
+    flex:1 0 auto; // flex属性是 flex-grow(扩展量) flex-shrink(伸缩量) flex-basis(伸缩基准值)的简写
 }
 .container{
-    display: flex; /*flex布局只对其直接子元素有影响*/
+    display: flex; // flex布局只对其直接子元素有影响
     flex-direction: column;
 }
 .fill-remaining-space{
-    flex: 1 1 auto; /*自动填满空间*/
+    flex: 1 1 auto; // 自动填满空间
 }
 .fill-width{
     width: 100%;

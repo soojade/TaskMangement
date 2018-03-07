@@ -1,10 +1,10 @@
-<mat-sidenav-container>
+<mat-sidenav-container [class.dark-theme]="isDarkTheme">
   <mat-sidenav #sidebar mode="side">
     <app-sidebar></app-sidebar>
   </mat-sidenav>
   <div class="container">
     <header>
-      <app-header (toggle)="sidebar.toggle()"></app-header>
+      <app-header (toggle)="sidebar.toggle()" (toggleDarkTheme)="switchTheme()"></app-header>
     </header>
     <main>
       <router-outlet></router-outlet>
