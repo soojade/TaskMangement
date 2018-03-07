@@ -6,7 +6,8 @@ import {
   MatSidenavModule,
   MatToolbarModule,
   MatCardModule,
-  MatInputModule
+  MatInputModule,
+  MatListModule
 } from '@angular/material';
 @NgModule({
   imports: [
@@ -16,7 +17,8 @@ import {
     MatSidenavModule,
     MatToolbarModule,
     MatCardModule,
-    MatInputModule
+    MatInputModule,
+    MatListModule
   ],
   exports: [
     CommonModule,
@@ -25,7 +27,8 @@ import {
     MatSidenavModule,
     MatToolbarModule,
     MatCardModule,
-    MatInputModule
+    MatInputModule,
+    MatListModule
   ],
   declarations: []
 })

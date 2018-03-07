@@ -1,19 +1,33 @@
-<mat-card>
-  <mat-card-header>
-    <mat-card-title>登录:</mat-card-title>
-  </mat-card-header>
-  <mat-card-content>
-    <mat-input-container color="warn">
-      <input type="email" matInput placeholder="请输入您的邮箱地址">
-      <mat-hint>必填</mat-hint>
-    </mat-input-container>
-  </mat-card-content>
-  <mat-card-actions>
-    <p>还没有账号?
-      <a href="" style="color:orange">注册</a>
-    </p>
-    <p>忘记密码?
+<form>
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>登录:</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-input-container color="warn" class="fill-width">
+        <input type="email" matInput placeholder="请输入您的账号邮箱">
+      </mat-input-container>
+      <mat-input-container color="warn" class="fill-width">
+        <input type="password" matInput placeholder="请输入您的密码">
+      </mat-input-container>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button type="button" color="accent">登录</button>
+    </mat-card-actions>
+    <mat-card-footer>
+      还没有账号?
+      <a href="" style="color:orange">注册</a> &nbsp;&nbsp; 忘记密码?
       <a href="" style="color:red">找回</a>
-    </p>
-  </mat-card-actions>
-</mat-card>
+    </mat-card-footer>
+  </mat-card>
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>励志名言</mat-card-title>
+      <mat-card-subtitle>志向和热爱是伟大行为的双翼。 —— 歌德</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="/assets/img/dog-fallback.jpg" alt="fallback">
+    <mat-card-content>
+      Ambition and love are the wings of great deeds
+    </mat-card-content>
+  </mat-card>
+</form>
