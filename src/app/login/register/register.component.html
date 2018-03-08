@@ -1,0 +1,32 @@
+<form>
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>注册:</mat-card-title>
+      <mat-icon svgIcon="user-1"></mat-icon>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-input-container color="warn" class="fill-width">
+        <input type="email" placeholder="请输入邮箱" matInput>
+      </mat-input-container>
+      <mat-input-container color="warn" class="fill-width">
+        <input type="text" placeholder="请输入密码" matInput>
+      </mat-input-container>
+      <mat-input-container color="warn" class="fill-width">
+        <input type="text" placeholder="再次确认密码" matInput>
+      </mat-input-container>
+      <mat-grid-list cols="5" rowHeight="1:1">
+        <mat-grid-tile *ngFor="let avatar of avatars">
+          <mat-icon class="avatar" [svgIcon]="avatar"></mat-icon>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </mat-card-content>
+    <mat-card-actions>
+      <button type="button" mat-raised-button color="accent">注册</button>
+    </mat-card-actions>
+    <mat-card-footer>
+      已有账号?
+      <a style="color:orange" routerLink="/login">登录</a> &nbsp;&nbsp; 忘记密码?
+      <a style="color:red">找回</a>
+    </mat-card-footer>
+  </mat-card>
+</form>

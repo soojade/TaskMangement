@@ -5,6 +5,7 @@ import { MatIconRegistry } from '@angular/material';
 export const loadSvgResources = (iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) => {
     const svgDir = 'assets/svg';
     const dayDir = `${svgDir}/days`;
+    const avatarDir = `${svgDir}/avatar`;
 
     iconRegistry.addSvgIcon(
         'menu',
@@ -31,11 +32,19 @@ export const loadSvgResources = (iconRegistry: MatIconRegistry, sanitizer: DomSa
         sanitizer.bypassSecurityTrustResourceUrl(`${svgDir}/day.svg`)
     );
 
-    // 使用循环加载31个svg
+    // 使用循环加载日历的31个svg
     for (let i = 1; i <= 31; i++) {
         iconRegistry.addSvgIcon(
             `${i}`,
             sanitizer.bypassSecurityTrustResourceUrl(`${dayDir}/${i}.svg`)
         );
     }
-}
+
+    // 加载16个头像
+  for (let i = 1; i <= 7; i++) {
+      iconRegistry.addSvgIcon(
+        `avatar${i}`,
+        sanitizer.bypassSecurityTrustResourceUrl(`${avatarDir}/avatar${i}.svg`)
+      );
+  }
+};
