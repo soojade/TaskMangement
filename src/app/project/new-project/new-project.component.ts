@@ -16,11 +16,9 @@ export class NewProjectComponent implements OnInit {
 
   ngOnInit() {
     // 由于对话框浮动在所有图层之上,切换黑夜模式不受影响,需额外设置
-    if (this.data.isDarkTheme) {
-      this.oc.getContainerElement().classList.add('dark-theme');
-    }
+    // this.oc.getContainerElement().classList.add('dark-theme');
   }
-  save() {
+  onSave() {
     this.dialogRef.close('saving...'); // 对话框向调用者发送消息
   }
 }

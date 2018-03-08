@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-project-item',
@@ -6,10 +6,14 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./project-item.component.scss']
 })
 export class ProjectItemComponent implements OnInit {
+  @Input() item;
+  @Output() invite = new EventEmitter<void>();
 
   constructor() { }
-  @Input() item;
   ngOnInit() {
   }
 
+  onInvite() {
+    this.invite.emit(); // 不涉及逻辑处理,由父组件处理
+  }
 }

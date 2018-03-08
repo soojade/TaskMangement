@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { NewProjectComponent } from '../new-project/new-project.component';
+import { InviteComponent } from '../invite/invite.component';
 @Component({
   selector: 'app-project-list',
   templateUrl: './project-list.component.html',
@@ -25,5 +26,8 @@ export class ProjectListComponent implements OnInit {
   openNewProjectDialog() {
     const dialogRef = this.dialog.open(NewProjectComponent); // 获取对话框引用
     dialogRef.afterClosed().subscribe(); // 订阅对话框引用可观察对象,使调用者接受对话框消息
+  }
+  openInviteDialog() {
+    this.dialog.open(InviteComponent);
   }
 }
