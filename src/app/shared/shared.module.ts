@@ -11,7 +11,8 @@ import {
   MatSlideToggleModule,
   MatGridListModule,
   MatDialogModule,
-  MatAutocompleteModule
+  MatAutocompleteModule,
+  MatMenuModule
 } from '@angular/material';
 @NgModule({
   imports: [
@@ -26,7 +27,8 @@ import {
     MatSlideToggleModule,
     MatGridListModule,
     MatDialogModule,
-    MatAutocompleteModule
+    MatAutocompleteModule,
+    MatMenuModule
   ],
   exports: [
     CommonModule,
@@ -39,7 +41,8 @@ import {
     MatListModule,
     MatSlideToggleModule,
     MatGridListModule,
-    MatAutocompleteModule
+    MatAutocompleteModule,
+    MatMenuModule
   ],
   declarations: []
 })
