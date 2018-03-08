@@ -1,4 +1,4 @@
-import { Component, OnInit, directive } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { NewProjectComponent } from '../new-project/new-project.component';
 @Component({
