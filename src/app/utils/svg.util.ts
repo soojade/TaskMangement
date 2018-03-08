@@ -12,6 +12,14 @@ export const loadSvgResources = (iconRegistry: MatIconRegistry, sanitizer: DomSa
         sanitizer.bypassSecurityTrustResourceUrl(`${svgDir}/menu.svg`)
     );
     iconRegistry.addSvgIcon(
+        'add',
+        sanitizer.bypassSecurityTrustResourceUrl(`${svgDir}/add.svg`)
+    );
+    iconRegistry.addSvgIcon(
+        'invite',
+        sanitizer.bypassSecurityTrustResourceUrl(`${svgDir}/invite.svg`)
+    );
+    iconRegistry.addSvgIcon(
         'people',
         sanitizer.bypassSecurityTrustResourceUrl(`${svgDir}/footer_people.svg`)
     );
@@ -41,10 +49,10 @@ export const loadSvgResources = (iconRegistry: MatIconRegistry, sanitizer: DomSa
     }
 
     // 加载16个头像
-  for (let i = 1; i <= 7; i++) {
-      iconRegistry.addSvgIcon(
-        `avatar${i}`,
-        sanitizer.bypassSecurityTrustResourceUrl(`${avatarDir}/avatar${i}.svg`)
-      );
-  }
+    for (let i = 1; i <= 7; i++) {
+        iconRegistry.addSvgIcon(
+            `avatar${i}`,
+            sanitizer.bypassSecurityTrustResourceUrl(`${avatarDir}/avatar${i}.svg`)
+        );
+    }
 };
