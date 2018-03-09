@@ -5,8 +5,6 @@
   flex-wrap:nowrap;
 }
 .list-container{
-  flex:1;
-  border-left: 1px solid rgb(0, 112, 64);
+  flex: 1 1 auto;
   overflow-y: scroll;
-  // overflow-x: hidden;
 }
