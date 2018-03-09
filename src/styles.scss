@@ -8,7 +8,8 @@ html,body,app-root,mat-sidenav-container,.container{
     padding: 0;
 }
 main{
-    flex:1 0 auto; // flex属性是 flex-grow(扩展量) flex-shrink(伸缩量) flex-basis(伸缩基准值)的简写
+    // flex:1 0 auto; // flex属性是 flex-grow(扩展量) flex-shrink(伸缩量) flex-basis(伸缩基准值)的简写
+    flex:1;
 }
 .container{
     display: flex; // flex布局只对其直接子元素有影响
