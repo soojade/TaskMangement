@@ -48,6 +48,22 @@ export class TaskHomeComponent implements OnInit {
           dueDate: new Date()
         }
       ]
+    },
+    {
+      id: 3,
+      name: '已完成',
+      tasks: [
+        {
+          id: 1,
+          desc: '任务二：睡觉',
+          owner: {
+            id: 1,
+            name: '李磊',
+            avatar: 'avatar4'
+          },
+          dueDate: new Date()
+        }
+      ]
     }
   ]
   constructor() { }

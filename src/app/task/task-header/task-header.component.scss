@@ -1,6 +1,12 @@
+.task-head{
+    margin-right: 5em;
+    font-size: 1.1em;
+}
 .fill{ // 使头部button撑满并居中
     flex: 1;
-    text-align: center;
+    // text-align: center;
+     display: flex;
+      justify-content: space-between;
 }
 .lp{
     padding-left: 12px; // 两个button之间有部分重叠,添加间距隔开
@@ -12,4 +18,5 @@
     align-items: center;
     align-content: center;
     width: 100%;
+    background: rgba(202, 177, 107, 0.5);
 }

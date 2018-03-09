@@ -5,9 +5,8 @@
   flex-wrap:nowrap;
 }
 .list-container{
-  flex:0 0 365px;
-  padding: 10px;
-  border-left: 2px solid rgb(0, 112, 64);
+  flex:1;
+  border-left: 1px solid rgb(0, 112, 64);
   overflow-y: scroll;
-//   overflow-x: hidden;
+  // overflow-x: hidden;
 }
