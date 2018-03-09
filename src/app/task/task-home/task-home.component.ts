@@ -14,16 +14,19 @@ export class TaskHomeComponent implements OnInit {
         {
           id: 1,
           desc: '任务一: 吃饭',
+          completed: false,
           owner: {
             id: 1,
             name: '张三',
             avatar: 'avatar1'
           },
-          dueDate: new Date()
+          dueDate: new Date(),
+          reminder: new Date()
         },
         {
           id: 2,
           desc: '任务二: 睡觉',
+          completed: false,
           owner: {
             id: 1,
             name: '李四',
@@ -40,12 +43,14 @@ export class TaskHomeComponent implements OnInit {
         {
           id: 1,
           desc: '任务三: 打豆豆',
+          completed: false,
           owner: {
             id: 1,
             name: '王五',
             avatar: 'avatar3'
           },
-          dueDate: new Date()
+          dueDate: new Date(),
+          reminder: new Date()
         }
       ]
     },
@@ -56,6 +61,7 @@ export class TaskHomeComponent implements OnInit {
         {
           id: 1,
           desc: '任务二：睡觉',
+          completed: true,
           owner: {
             id: 1,
             name: '李磊',
