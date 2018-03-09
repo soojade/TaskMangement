@@ -1,4 +1,5 @@
-<app-project-item class="card" *ngFor="let project of projects" [item]="project" (invite)="openInviteDialog()"></app-project-item>
+<app-project-item class="card" *ngFor="let project of projects" [item]="project" (invite)="openInviteDialog()">
+</app-project-item>
 <button class="fab-btn" type="button" mat-mini-fab (click)="openNewProjectDialog()">
   <mat-icon svgIcon="add"></mat-icon>
 </button>

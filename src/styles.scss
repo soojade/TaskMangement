@@ -20,3 +20,9 @@ main{
 .fill-width{
     width: 100%;
 }
+.fab-btn{
+    position: fixed !important; // 由于通用样式会被组件自身样式影响,需要加!important
+    right: 32px;
+    bottom: 55px;
+    z-index: 2;
+}
