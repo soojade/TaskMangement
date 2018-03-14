@@ -3,7 +3,7 @@
     <h3>{{status}}</h3>
   </div>
   <div class="fill">
-    <button mat-icon-button>
+    <button mat-icon-button type="button" (click)="onNewTask()">
       <mat-icon>add_circle_outline</mat-icon>
       <span>新任务</span>
     </button>
@@ -12,13 +12,12 @@
     </button>
   </div>
 </div>
-
 <mat-menu #menu="matMenu">
   <button mat-menu-item>
     <mat-icon>mode_edit</mat-icon>
     <span>修改列表名称</span>
   </button>
-  <button mat-menu-item>
+  <button mat-menu-item (click)="onMove()">
     <mat-icon>removet</mat-icon>
     <span>移动本列表所有内容</span>
   </button>

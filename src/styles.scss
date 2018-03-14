@@ -21,9 +21,15 @@ main{
 .fill-width{
     width: 100%;
 }
-.fab-btn{
+.fab-btn{ // 右下角悬浮按钮
     position: fixed !important; // 由于通用样式会被组件自身样式影响,需要加!important
     right: 32px;
     bottom: 55px;
     z-index: 2;
+}
+h3[mat-dialog-title]{
+    text-align: center;
+}
+.mat-radio-button{
+    padding-right: 15px;
 }

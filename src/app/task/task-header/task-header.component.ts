@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-task-header',
@@ -7,9 +7,16 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class TaskHeaderComponent implements OnInit {
   @Input() status = '';
+  @Output() newTask = new EventEmitter<void>();
+  @Output() moveTask = new EventEmitter<void>();
   constructor() { }
 
   ngOnInit() {
   }
-
+  onNewTask() {
+    this.newTask.emit();
+  }
+  onMove() {
+    this.moveTask.emit();
+  }
 }

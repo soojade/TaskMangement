@@ -1,0 +1,8 @@
+.new-task{
+    width: 400px;
+    height: 100%;
+}
+div[mat-dialog-actions]{
+    display: flex;
+    justify-content: space-between;
+}

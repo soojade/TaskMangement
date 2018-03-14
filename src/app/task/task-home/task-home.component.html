@@ -1,6 +1,6 @@
 <div class="task-list">
   <app-task-list class="list-container" *ngFor="let list of lists">
-    <app-task-header [status]="list.name"></app-task-header>
+    <app-task-header [status]="list.name" (newTask)="openNewTaskDialog()" (moveTask)="openCopyTaskDialog()"></app-task-header>
     <app-task-item *ngFor="let task of list.tasks" [item]="task"></app-task-item>
   </app-task-list>
 </div>
