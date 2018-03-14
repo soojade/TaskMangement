@@ -1,9 +1,21 @@
+.container{
+    width: 100%;
+    border-radius: 3px;
+    box-shadow: 0 1px 2px rgba(30, 32, 31, 0.1);
+}
 .checkbox{
     order: -1;
 }
+.completed{
+    text-decoration: line-through;
+    opacity: 0.85;
+    color: #4e8f5b;
+}
 .due-date{
-    background-color: rgb(248, 92, 92);
+    background-color: rgb(83, 212, 94);
     color: #fff;
+    border-radius: 6px;
+    font-size: 10px;
 }
 .alarm{
     font-size: 16px;
@@ -18,6 +30,7 @@
 .content{
     order: 1;
     width: 100%;
+    padding: 5px;
 }
 .avatar{
     overflow: hidden;
@@ -26,4 +39,14 @@
     border-radius: 50%;
     margin: 12px;
     order: 3;
+}
+// 优先级
+.priority-normal{ // 正常
+    border-left: 3px solid rgba(74, 221, 86, 0.6);
+}
+.priority-important{ // 重要
+    border-left: 3px solid rgba(183, 0, 255,.75);
+}
+.priority-emergency{ // 紧急
+    border-left: 3px solid rgba(225, 0, 0,.8);
 }
