@@ -33,3 +33,7 @@ h3[mat-dialog-title]{
 .mat-radio-button{
     padding-right: 15px;
 }
+div[mat-dialog-actions]{ // dialog下面button排列
+    display: flex;
+    justify-content: space-evenly;
+}

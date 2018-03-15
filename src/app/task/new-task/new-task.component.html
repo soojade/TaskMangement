@@ -1,5 +1,5 @@
 <form class="new-task">
-  <h3 mat-dialog-title>新建任务</h3>
+  <h3 mat-dialog-title>{{title}}</h3>
   <div mat-dialog-content>
     <mat-form-field class="fill-width">
       <input type="text" matInput placeholder="任务内容">
@@ -19,7 +19,7 @@
     </mat-form-field>
   </div>
   <div mat-dialog-actions>
-    <button type="button" mat-raised-button mat-dialog-close="true">保存</button>
-    <button type="button" mat-raised-button mat-dialog-close>关闭</button>
+    <button type="button" mat-raised-button mat-dialog-close color="primary">保存</button>
+    <button type="button" mat-raised-button mat-dialog-close color="accent">关闭</button>
   </div>
 </form>

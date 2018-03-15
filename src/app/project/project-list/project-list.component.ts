@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { NewProjectComponent } from '../new-project/new-project.component';
 import { InviteComponent } from '../invite/invite.component';
+import { ConfirmDialogComponent } from '../../shared/confirm-dialog/confirm-dialog.component';
 @Component({
   selector: 'app-project-list',
   templateUrl: './project-list.component.html',
@@ -24,10 +25,16 @@ export class ProjectListComponent implements OnInit {
   ngOnInit() {
   }
   openNewProjectDialog() {
-    const dialogRef = this.dialog.open(NewProjectComponent); // 获取对话框引用
-    dialogRef.afterClosed().subscribe(); // 订阅对话框引用可观察对象,使调用者接受对话框消息
+    const dialogRef = this.dialog.open(NewProjectComponent, { data: { title: '新建项目' } }); // 获取对话框引用
+    // dialogRef.afterClosed().subscribe(); // 订阅对话框引用可观察对象,使调用者接收对话框消息
   }
   openInviteDialog() {
     this.dialog.open(InviteComponent);
+  }
+  edit() {
+    const dialogRef = this.dialog.open(NewProjectComponent, { data: { title: '编辑项目' } });
+  }
+  openConfirmDialog() {
+    const dialogRef = this.dialog.open(ConfirmDialogComponent, { data: { title: '删除项目', content: '确认是否要删除?' } });
   }
 }

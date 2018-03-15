@@ -1,5 +1,5 @@
 <form>
-  <h3 mat-dialog-title>新建项目</h3>
+  <h3 mat-dialog-title>{{title}}</h3>
   <div mat-dialog-content>
     <mat-form-field class="fill-width">
       <input type="text" placeholder="项目名称" matInput>
@@ -9,10 +9,7 @@
     </mat-form-field>
   </div>
   <div mat-dialog-actions>
-    <div class="flex-container">
-      <!--由于上层div使用了material指令,display为block,再设置flex无效,所以新增一div层-->
-      <button type="button" color="primary" mat-raised-button (click)="onSave()">保存</button>
-      <button type="button" color="warn" mat-raised-button mat-dialog-close>关闭</button>
-    </div>
+    <button type="button" color="primary" mat-raised-button (click)="onSave()">保存</button>
+    <button type="button" color="warn" mat-raised-button mat-dialog-close>关闭</button>
   </div>
 </form>

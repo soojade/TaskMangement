@@ -7,13 +7,15 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
   styleUrls: ['./new-project.component.scss']
 })
 export class NewProjectComponent implements OnInit {
-
+  title = '';
   constructor(
     @Inject(MAT_DIALOG_DATA) private data,
     private dialogRef: MatDialogRef<NewProjectComponent>
   ) { }
 
-  ngOnInit() { }
+  ngOnInit() {
+    this.title = this.data.title;
+  }
   onSave() {
     this.dialogRef.close('saving...'); // 对话框向调用者发送消息
   }

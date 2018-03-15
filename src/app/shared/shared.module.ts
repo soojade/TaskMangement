@@ -20,6 +20,7 @@ import {
   MatRadioModule,
   MatSelectModule
 } from '@angular/material';
+import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -62,7 +63,8 @@ import {
     MatRadioModule,
     MatSelectModule
   ],
-  declarations: []
+  declarations: [ConfirmDialogComponent],
+  entryComponents: [ConfirmDialogComponent]
 })
 
 // 共享模块,将通用的模块导入并导出
