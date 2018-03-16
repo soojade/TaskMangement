@@ -1,12 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostBinding } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { NewProjectComponent } from '../new-project/new-project.component';
 import { InviteComponent } from '../invite/invite.component';
 import { ConfirmDialogComponent } from '../../shared/confirm-dialog/confirm-dialog.component';
+import { slideToRight } from '../../animations/router.animation';
 @Component({
   selector: 'app-project-list',
   templateUrl: './project-list.component.html',
-  styleUrls: ['./project-list.component.scss']
+  styleUrls: ['./project-list.component.scss'],
+  animations: [slideToRight]
 })
 export class ProjectListComponent implements OnInit {
   projects = [
@@ -21,6 +23,8 @@ export class ProjectListComponent implements OnInit {
       "coverImg": "assets/img/covers/1.jpg"
     }
   ]
+
+  @HostBinding('@routeAnimation') state;
   constructor(private dialog: MatDialog) { }
   ngOnInit() {
   }

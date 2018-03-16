@@ -2,7 +2,7 @@ import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { DomSanitizer } from '@angular/platform-browser';
 import { MatIconRegistry } from '@angular/material';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { loadSvgResources } from '../utils/svg.util';
 
 import { SharedModule } from '../shared/shared.module';
@@ -10,14 +10,17 @@ import { SharedModule } from '../shared/shared.module';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { AppRoutingModule } from '../app-routing-module';
 
 @NgModule({
   imports: [
     HttpClientModule,
-    SharedModule
+    SharedModule,
+    BrowserAnimationsModule,
+    AppRoutingModule
   ],
   declarations: [HeaderComponent, FooterComponent, SidebarComponent],
-  exports: [HeaderComponent, FooterComponent, SidebarComponent]
+  exports: [HeaderComponent, FooterComponent, SidebarComponent, BrowserAnimationsModule, AppRoutingModule, SharedModule]
 })
 export class CoreModule {
   // 在构造函数中使用依赖注入,使本模块只加载一次
