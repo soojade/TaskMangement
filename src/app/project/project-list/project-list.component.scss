@@ -4,9 +4,9 @@
     margin: 10px;
     box-shadow: 0 0 5px 0 rgba(0, 136, 136, 0.275);
 }
-:host{
+.container{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
 }

@@ -1,6 +1,6 @@
 <mat-sidenav-container [class.dark-theme]="isDarkTheme">
-  <mat-sidenav #sidebar mode="push">
-    <app-sidebar></app-sidebar>
+  <mat-sidenav #sidebar>
+    <app-sidebar (click)="sidebar.toggle()"></app-sidebar>
   </mat-sidenav>
   <div class="container">
     <header>
