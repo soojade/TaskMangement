@@ -1,8 +1,15 @@
-<mat-list-item class="container" [ngClass]="{
+<mat-list-item class="container"
+  [ngClass]="{
    'priority-normal':item.priority===1,
    'priority-important':item.priority===2,
    'priority-emergency':item.priority===3
-}" (click)="onItemClick()" [@taskItem]="taskState">
+  }"
+  [appDragDirective]="true"
+               [dragTag]="'task-item'"
+               [dragData]="item"
+  [draggedClass]="'dragged'"
+  (click)="onItemClick()"
+  [@taskItem]="taskState">
   <mat-checkbox class="checkbox" [checked]="item.completed" (click)="onCheckboxClick($event)"></mat-checkbox>
   <div mat-line class="content" [ngClass]="{'completed':item.completed}">
     <span matTooltip="{{item.desc}}">{{item.desc}}</span>

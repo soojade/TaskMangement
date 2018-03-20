@@ -20,10 +20,12 @@ import {
   MatRadioModule,
   MatSelectModule
 } from '@angular/material';
+import { DirectiveModule } from '../directive/directive.module';
 import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
 @NgModule({
   imports: [
     CommonModule,
+    DirectiveModule,
     MatButtonModule,
     MatIconModule,
     MatSidenavModule,
@@ -45,6 +47,7 @@ import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.componen
   ],
   exports: [
     CommonModule,
+    DirectiveModule,
     MatButtonModule,
     MatIconModule,
     MatSidenavModule,
