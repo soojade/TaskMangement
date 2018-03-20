@@ -1,4 +1,4 @@
-import { Component, OnInit, HostBinding, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit, HostBinding, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { NewProjectComponent } from '../new-project/new-project.component';
 import { InviteComponent } from '../invite/invite.component';
@@ -29,13 +29,14 @@ export class ProjectListComponent implements OnInit {
   ]
 
   @HostBinding('@routeAnimation') state;
-  constructor(private dialog: MatDialog) { }
+  constructor(private dialog: MatDialog, private cd: ChangeDetectorRef) { }
   ngOnInit() {
   }
   openNewProjectDialog() {
     const dialogRef = this.dialog.open(NewProjectComponent, { data: { title: '新建项目' } }); // 获取对话框引用
     dialogRef.afterClosed().subscribe(() => {
       this.projects = [...this.projects, { 'id': 3, 'name': 'linshi', 'desc': 'hello', "coverImg": "assets/img/covers/1.jpg" }];
+      this.cd.markForCheck(); // 主动告诉ng在这里检查
     }); // 订阅对话框引用可观察对象,使调用者接收对话框消息
   }
 
@@ -49,6 +50,7 @@ export class ProjectListComponent implements OnInit {
     const dialogRef = this.dialog.open(ConfirmDialogComponent, { data: { title: '删除项目', content: '确认是否要删除?' } });
     dialogRef.afterClosed().subscribe(() => {
       this.projects = this.projects.filter(p => p.id != project.id);
+      this.cd.markForCheck();
     })
   }
 }
