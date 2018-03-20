@@ -1,5 +1,4 @@
-import { trigger, state, transition, style, animate } from '@angular/animations';
-import { group } from '@angular/core';
+import { trigger, state, transition, style, animate, group } from '@angular/animations';
 
 export const slideToRight = trigger('routeAnimation', [
     state('void', style({ 'width': '100%', 'height': '100%' })),
@@ -8,7 +7,7 @@ export const slideToRight = trigger('routeAnimation', [
         style({ transform: 'translateX(-100%)', opacity: 0 }),
         group([
             animate('.5s ease-in-out', style({ transform: 'translateX(0)' })),
-            animate('.3s ease-in', style({ opacity: 1 })),
+            animate('.3s ease-in', style({ opacity: 1 }))
         ])
     ]),
     transition(':leave', [
@@ -17,5 +16,5 @@ export const slideToRight = trigger('routeAnimation', [
             animate('.5s ease-in-out', style({ transform: 'translateX(100%)' })),
             animate('.3s ease-in', style({ opacity: 0 })),
         ])
-    ]),
+    ])
 ]);

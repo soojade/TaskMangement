@@ -1,4 +1,4 @@
-import { Component, OnInit, HostBinding } from '@angular/core';
+import { Component, OnInit, HostBinding, ChangeDetectionStrategy } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { NewProjectComponent } from '../new-project/new-project.component';
 import { InviteComponent } from '../invite/invite.component';
@@ -9,7 +9,8 @@ import { listAnimation } from '../../animations/list.animation';
   selector: 'app-project-list',
   templateUrl: './project-list.component.html',
   styleUrls: ['./project-list.component.scss'],
-  animations: [slideToRight, listAnimation]
+  animations: [slideToRight, listAnimation],
+  changeDetection: ChangeDetectionStrategy.OnPush // 禁止ng自动检查,只有外部状态发生变化时才检查
 })
 export class ProjectListComponent implements OnInit {
   projects = [
