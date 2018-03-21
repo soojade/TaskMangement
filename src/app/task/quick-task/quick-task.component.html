@@ -1,0 +1,19 @@
+<form>
+  <mat-form-field class="fill-width">
+    <input
+      type="text"
+      placeholder="快速建立任务"
+      matInput
+      name="desc"
+      [(ngModel)]="desc"
+    >
+      <button
+        type="button"
+        matSuffix
+        mat-icon-button
+        (click)="sendQuickTask()"
+      >
+        <mat-icon>send</mat-icon>
+        </button>
+  </mat-form-field>
+</form>
